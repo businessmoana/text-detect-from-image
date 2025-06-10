@@ -1,26 +1,38 @@
-PROMPT TO EXTRACT MAIN TEXT FROM PRODUCT IMAGE (E.G. T-SHIRT)
+TASK
+From the product image (e.g., T-shirt, apron, mug), extract the entire main textual content, including structured elements like humorous lists, tables, attributes, percentages, or any clearly grouped text.
 
-You are an expert in image text recognition and product slogan extraction.
+INSTRUCTIONS
 
-🔹 TASK
-From the image of a product (e.g., T-shirt, apron, mug), extract only the main slogan or key phrase printed on the product.
+- Extract all clearly visible main design text.
+- Include structured lists, numerical details, attributes, humorous or creative content exactly as shown.
+- Retain original spelling, punctuation, emojis, symbols, and visual formatting.
+- Preserve line breaks, indentation, and spacing as they appear in the design.
+- Exclude only clearly irrelevant text such as website URLs, size labels, tags, very small watermark texts, or customization instructions.
+- Maintain the exact visual grouping and sequencing of the original design.
 
-🔹 INSTRUCTIONS
+EXAMPLES
 
-Extract only the main creative or humorous text that is the focus of the design.
+If the T-shirt shows:
 
-Ignore any extra elements like brand names, website URLs, customization instructions (e.g., "Create your own design"), size labels, or watermark text.
+Učiteljica
+Delavnost 120%
+Strast 100%
+Predanost 300%
+Ponos 160%
+Spoštovanje 200%
+Kofein v krvi 200%
+Obžalovanje 0%
 
-Copy the main phrase exactly as it appears:
+→ Output exactly as above.
 
-Keep original spelling, punctuation, and letter casing.
+If a mug shows:
 
-Preserve emojis or symbols if they are part of the design.
+Najboljša mami na svetu ❤️
+www.top-majice.com
 
-Output only the main text, with no description or extra commentary.
+→ Output:
 
-🔹 EXAMPLES
+Najboljša mami na svetu ❤️
 
-If the shirt says: "Janez je legenda" and below it also says "Izdelajte si majico po želji" → Output: Janez je legenda
-
-If the mug says: "Najboljša mami na svetu ❤️" and below is a small line with "www.top-majice.com" → Output: Najboljša mami na svetu ❤️
+OUTPUT
+Provide extracted text exactly as structured, line-by-line if multiple lines appear, preserving all formatting details.
